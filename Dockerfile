@@ -18,6 +18,9 @@ ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $PATH:/usr/local/jdk1.8.0_201/bin:/usr/local/jdk1.8.0_201/jre/bin:$CATALINA_HOME/bin
 ENV CLASSPATH /usr/local/jdk1.8.0_201/jre/bin:/usr/local/jdk1.8.0_201/lib:/usr/local/jdk1.8.0_201/jre/lib/charsets.jar
 
+ARG JAVA_OPTS=""
+# COPY xxx.war /usr/local/tomcat/webapps/xxx.war
+
 WORKDIR /usr/local/tomcat/webapps
 
 EXPOSE 8080
